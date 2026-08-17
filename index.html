@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="张涵 - AI 产品经理的个人主页">
+  <title>张涵 | 个人网站</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@360;400;480;500;530;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">张涵<span>.</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="active">首页</a>
+        <a href="#about">关于我</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <a href="#contact" class="btn btn-nav">联系我</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 首屏：复刻 Mercury hero -->
+  <section class="hero" id="home">
+    <img src="assets/hero-bg.jpg" alt="背景" class="hero-bg" aria-hidden="true">
+    <div class="hero-gradient" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <p class="hero-kicker">AI 产品经理</p>
+      <h1 class="hero-title">张涵</h1>
+      <p class="hero-subtitle" id="typed"></p>
+      <p class="hero-desc">
+        热爱创造优雅、实用的产品。专注于把复杂的想法变成简单、好用的体验。
+      </p>
+
+      <div class="hero-cta">
+        <form class="cta-box" id="cta-form" novalidate>
+          <input type="email" id="cta-email" placeholder="输入邮箱，与我联系" aria-label="邮箱">
+          <button type="submit" class="btn btn-primary">联系我</button>
+        </form>
+        <a href="#projects" class="btn btn-ghost">查看我的作品</a>
+      </div>
+
+      <div class="hero-social">
+        <a href="#">GitHub</a>
+        <a href="#">微博</a>
+        <a href="#">邮箱</a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-down" aria-label="向下滚动">↓</a>
+  </section>
+
+  <!-- 关于我 -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-index">01</span>
+        <h2 class="section-title">关于我</h2>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>
+            这里写一段自我介绍。可以介绍你的背景、经历、兴趣，以及你正在做的事情。
+            比如：我是一名 AI 产品经理，拥有 X 年经验，专注于构建高质量的数字产品。
+          </p>
+          <p>
+            我喜欢学习新技术、解决有趣的问题，并与优秀的团队一起协作。
+            业余时间我会写博客、参与开源项目、探索摄影和音乐。
+          </p>
+          <div class="about-facts">
+            <div class="fact"><span class="fact-num">X+</span><span class="fact-label">年经验</span></div>
+            <div class="fact"><span class="fact-num">XX</span><span class="fact-label">完成项目</span></div>
+            <div class="fact"><span class="fact-num">XX</span><span class="fact-label">客户好评</span></div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="avatar">张</div>
+          <h3>张涵</h3>
+          <p class="about-role">AI 产品经理</p>
+          <ul class="about-list">
+            <li><span>📍</span> 城市，中国</li>
+            <li><span>🎓</span> 学校 / 专业</li>
+            <li><span>💼</span> 公司 / 职位</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-index">02</span>
+        <h2 class="section-title">我的技能</h2>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill">
+          <div class="skill-head"><span>产品规划</span><span>90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>用户研究</span><span>85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>数据分析</span><span>80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-head"><span>项目管理</span><span>75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        </div>
+      </div>
+      <div class="tech-tags reveal">
+        <span>PRD</span><span>竞品分析</span><span>用户访谈</span><span>数据分析</span>
+        <span>Axure</span><span>Figma</span><span>SQL</span><span>AI 应用</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 项目 -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-index">03</span>
+        <h2 class="section-title">我的项目</h2>
+      </div>
+      <div class="projects-grid reveal">
+        <article class="project">
+          <div class="project-top">
+            <span class="project-icon">🖥️</span>
+            <span class="project-year">2024</span>
+          </div>
+          <div class="project-body">
+            <h3>项目名称一</h3>
+            <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
+            <div class="project-tags"><span>AI 产品</span><span>从 0 到 1</span></div>
+            <a href="#" class="project-link">了解更多 →</a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-top">
+            <span class="project-icon">📱</span>
+            <span class="project-year">2023</span>
+          </div>
+          <div class="project-body">
+            <h3>项目名称二</h3>
+            <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
+            <div class="project-tags"><span>移动端</span><span>增长</span></div>
+            <a href="#" class="project-link">了解更多 →</a>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-top">
+            <span class="project-icon">🤖</span>
+            <span class="project-year">2023</span>
+          </div>
+          <div class="project-body">
+            <h3>项目名称三</h3>
+            <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
+            <div class="project-tags"><span>大模型</span><span>Agent</span></div>
+            <a href="#" class="project-link">了解更多 →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-index">04</span>
+        <h2 class="section-title">联系我</h2>
+      </div>
+      <p class="contact-intro reveal">有项目想合作，或者只是想打个招呼？欢迎随时联系我！</p>
+      <div class="contact-grid reveal">
+        <a href="mailto:you@example.com" class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <span class="contact-label">邮箱</span>
+          <span class="contact-value">you@example.com</span>
+        </a>
+        <a href="#" class="contact-item">
+          <span class="contact-icon">🐙</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/yourname</span>
+        </a>
+        <a href="#" class="contact-item">
+          <span class="contact-icon">💼</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/yourname</span>
+        </a>
+        <a href="#" class="contact-item">
+          <span class="contact-icon">📱</span>
+          <span class="contact-label">微信</span>
+          <span class="contact-value">微信号</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> 张涵 · 用心制作</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

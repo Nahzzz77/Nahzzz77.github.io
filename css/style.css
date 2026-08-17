@@ -268,16 +268,23 @@ a { text-decoration: none; color: inherit; }
   width: 100%;
 }
 
-.hero-grid {
+/* 三栏布局：左标语 + 中间 logo + 右标语（复刻 ciridae future_grid） */
+.future-grid {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr 0.5fr 1fr;
   align-items: center;
   gap: 32px;
   margin-bottom: 64px;
 }
 
-.hero-side-left { justify-self: start; }
-.hero-side-right { justify-self: end; }
+.future-split {
+  display: flex;
+  align-items: center;
+}
+
+.future-split.is-right {
+  justify-content: flex-end;
+}
 
 .hero-slogan {
   font-family: var(--font-cond);
@@ -289,33 +296,52 @@ a { text-decoration: none; color: inherit; }
   color: var(--white);
 }
 
-.hero-center {
+.future-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.hero-mark {
-  width: clamp(120px, 18vw, 180px);
-  height: auto;
+/* 星图 logo（复刻 ciridae hero_logo） */
+.hero-logo {
+  filter: blur(2px);
+  width: clamp(141px, 9.79vw, 171px);
+  overflow: visible;
 }
 
-.hero-mark-spin {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: spin 28s linear infinite;
+.logo-pieces {
+  aspect-ratio: 1000 / 1153;
+  width: 100%;
+  position: relative;
+  color: var(--white);
 }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
+.logo-piece {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.hero-name {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+.logo-piece.center {
+  z-index: 2;
+}
+
+.logo-piece-chars {
+  position: absolute;
+  top: 83%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+}
+
+.logo-word {
+  font-size: 13px;
   font-weight: 400;
-  letter-spacing: 0.06em;
-  line-height: 1.1;
+  letter-spacing: 0.18em;
+  color: var(--white);
 }
 
 .hero-bottom {
@@ -725,24 +751,24 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== 响应式 ===== */
 @media (max-width: 768px) {
-  .hero-grid {
+  .future-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 28px;
     text-align: center;
     margin-bottom: 48px;
   }
 
-  .hero-side-left,
-  .hero-side-right {
-    justify-self: center;
+  .future-split,
+  .future-split.is-right {
+    justify-content: center;
     text-align: center;
   }
 
-  .hero-side-right {
+  .future-split.is-right {
     order: 3;
   }
 
-  .hero-center {
+  .future-center {
     order: 2;
   }
 

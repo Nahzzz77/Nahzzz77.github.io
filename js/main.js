@@ -1,21 +1,41 @@
+// ===== 逐字拆分动画 =====
+// 把 .split-text 元素按字符拆分，逐个显现（复刻 ciridae.com 的 split-text 效果）
+function splitText() {
+  document.querySelectorAll(".split-text").forEach((el) => {
+    const text = el.getAttribute("data-text") || el.textContent;
+    el.textContent = "";
+    el.setAttribute("aria-label", text);
+    [...text].forEach((char, i) => {
+      const span = document.createElement("span");
+      span.className = "char";
+      span.textContent = char === " " ? "\u00A0" : char;
+      span.style.setProperty("--i", i);
+      span.setAttribute("aria-hidden", "true");
+      el.appendChild(span);
+    });
+  });
+}
+splitText();
+
 // ===== 导航栏滚动效果 =====
 const navbar = document.getElementById("navbar");
-
 window.addEventListener("scroll", () => {
   navbar.classList.toggle("scrolled", window.scrollY > 30);
 });
 
-// ===== 移动端菜单 =====
+// ===== 全屏菜单 =====
 const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+const menuOverlay = document.getElementById("menu-overlay");
 
 menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
+  const open = menuOverlay.classList.toggle("open");
+  menuToggle.classList.toggle("open", open);
 });
 
-navLinks.querySelectorAll("a").forEach((link) => {
+menuOverlay.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
+    menuOverlay.classList.remove("open");
+    menuToggle.classList.remove("open");
   });
 });
 
@@ -53,25 +73,6 @@ skillBars.forEach((bar) => {
   bar.style.width = "0";
   skillObserver.observe(bar);
 });
-
-// ===== 当前导航高亮 =====
-const sections = document.querySelectorAll("section[id]");
-const navAnchors = document.querySelectorAll(".nav-links a");
-
-const navObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        navAnchors.forEach((a) => {
-          a.classList.toggle("active", a.getAttribute("href") === `#${entry.target.id}`);
-        });
-      }
-    });
-  },
-  { rootMargin: "-40% 0px -55% 0px" }
-);
-
-sections.forEach((s) => navObserver.observe(s));
 
 // ===== 页脚年份 =====
 document.getElementById("year").textContent = new Date().getFullYear();

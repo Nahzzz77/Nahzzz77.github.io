@@ -12,58 +12,70 @@
 </head>
 <body>
 
-  <!-- 顶部新闻条 -->
-  <div class="newsbar">
-    <span class="newsbar-text">AI 产品经理 · 张涵 · 个人网站 · 2026</span>
+  <!-- 顶部光带横幅 -->
+  <div class="draft-banner">
+    <div class="sweep sweep-a"></div>
+    <div class="sweep sweep-b"></div>
+    <span class="banner-text">AI 产品经理 · 张涵 · 个人网站</span>
   </div>
 
   <!-- 导航栏 -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#home" class="logo">
-        <svg class="logo-mark" viewBox="0 0 40 40" width="22" height="22" aria-hidden="true">
+      <a href="#contact" class="btn btn-ghost">联系我</a>
+      <a href="#home" class="nav-logo" aria-label="回到顶部">
+        <svg viewBox="0 0 40 40" width="28" height="28" aria-hidden="true">
           <path d="M20 2 L24 16 L38 20 L24 24 L20 38 L16 24 L2 20 L16 16 Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
           <rect x="16" y="16" width="8" height="8" transform="rotate(45 20 20)" fill="none" stroke="#cc6437" stroke-width="1.2"/>
         </svg>
-        <span class="logo-text">张涵</span>
       </a>
-      <nav class="nav-links" id="nav-links">
-        <a href="#home" class="active">首页</a>
-        <a href="#about">关于</a>
-        <a href="#skills">技能</a>
-        <a href="#projects">项目</a>
-        <a href="#contact">联系</a>
-      </nav>
-      <a href="#contact" class="btn btn-ghost btn-nav">联系我</a>
-      <button class="menu-toggle" id="menu-toggle" aria-label="打开菜单">
-        <span></span><span></span><span></span>
+      <button class="menu-btn" id="menu-toggle" aria-label="菜单">
+        <span class="menu-label">菜单</span>
+        <span class="menu-burger"><i></i><i></i></span>
       </button>
     </div>
+    <!-- 全屏菜单 -->
+    <nav class="menu-overlay" id="menu-overlay">
+      <a href="#home">首页</a>
+      <a href="#about">关于</a>
+      <a href="#skills">技能</a>
+      <a href="#projects">项目</a>
+      <a href="#contact">联系</a>
+    </nav>
   </header>
 
-  <!-- 首屏 -->
+  <!-- 首屏：三栏布局 + 中间 logo -->
   <section class="hero" id="home">
     <img src="assets/hero-bg.webp" alt="" class="hero-bg" aria-hidden="true">
     <div class="hero-overlay" aria-hidden="true"></div>
 
     <div class="container hero-inner">
-      <svg class="hero-mark" viewBox="0 0 100 100" width="72" height="72" aria-hidden="true">
-        <path d="M50 6 L56 44 L94 50 L56 56 L50 94 L44 56 L6 50 L44 44 Z" fill="none" stroke="#ffffff" stroke-width="1"/>
-        <rect x="38" y="38" width="24" height="24" transform="rotate(45 50 50)" fill="none" stroke="#cc6437" stroke-width="1"/>
-      </svg>
-      <p class="hero-eyebrow">AI PRODUCT MANAGER</p>
-      <h1 class="hero-title">张涵</h1>
-      <p class="hero-subtitle">把复杂的想法，变成简单好用的产品。</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-ghost">查看作品</a>
-        <a href="#contact" class="btn btn-ghost btn-rust">联系我</a>
+      <div class="hero-grid">
+        <div class="hero-side hero-side-left">
+          <p class="hero-slogan split-text" data-text="AI PRODUCT">AI PRODUCT</p>
+        </div>
+        <div class="hero-center">
+          <svg class="hero-mark" viewBox="0 0 100 100" aria-hidden="true">
+            <g class="hero-mark-spin">
+              <path d="M50 6 L56 44 L94 50 L56 56 L50 94 L44 56 L6 50 L44 44 Z" fill="none" stroke="#ffffff" stroke-width="1"/>
+            </g>
+            <rect x="38" y="38" width="24" height="24" transform="rotate(45 50 50)" fill="none" stroke="#cc6437" stroke-width="1"/>
+          </svg>
+          <h1 class="hero-name split-text" data-text="张涵">张涵</h1>
+        </div>
+        <div class="hero-side hero-side-right">
+          <p class="hero-slogan split-text" data-text="MANAGER">MANAGER</p>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <p class="hero-eyebrow split-text" data-text="把复杂的想法，变成简单好用的产品">把复杂的想法，变成简单好用的产品</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-ghost" data-hover="查看作品"><span>查看作品</span></a>
+          <a href="#contact" class="btn btn-rust" data-hover="联系我"><span>联系我</span></a>
+        </div>
       </div>
     </div>
-
-    <a href="#about" class="scroll-down" aria-label="向下滚动">
-      <span>SCROLL</span>
-      <span class="scroll-line"></span>
-    </a>
   </section>
 
   <!-- 关于我 -->
@@ -186,7 +198,7 @@
     </div>
   </section>
 
-  <!-- 联系（浅色段：唯一亮色，戏剧性对比） -->
+  <!-- 联系（浅色段） -->
   <section class="section section-bone" id="contact">
     <div class="container">
       <div class="section-head reveal">

@@ -3,188 +3,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="张涵 - AI 产品经理的个人主页">
-  <title>张涵 · AI 产品经理</title>
+  <meta name="description" content="张涵 - AI 产品经理的博客">
+  <title>张涵的博客 · 把复杂变简单</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Roboto+Mono:wght@400&family=Inter:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- 顶部光带横幅 -->
-  <div class="draft-banner">
-    <div class="sweep sweep-a"></div>
-    <div class="sweep sweep-b"></div>
-    <span class="banner-text">AI 产品经理 · 张涵 · 个人网站</span>
-  </div>
-
-  <!-- 导航栏 -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="#contact" class="btn btn-ghost">联系我</a>
-      <a href="#home" class="nav-logo" aria-label="回到顶部">
-        <svg viewBox="0 0 40 40" width="26" height="26" aria-hidden="true">
-          <path d="M20 2 L24 16 L38 20 L24 24 L20 38 L16 24 L2 20 L16 16 Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
-          <rect x="16" y="16" width="8" height="8" transform="rotate(45 20 20)" fill="none" stroke="#cc6437" stroke-width="1.2"/>
-        </svg>
+  <!-- 头部：站名 + 标语 + 导航 -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#" class="site-title">
+        张涵
+        <span class="tagline">把复杂变简单</span>
       </a>
-      <button class="menu-btn" id="menu-toggle" aria-label="菜单">
-        <span class="menu-label">菜单</span>
-        <span class="menu-burger"><i></i><i></i></span>
-      </button>
+      <nav class="nav" aria-label="主导航">
+        <a href="#" class="active">首页</a>
+        <a href="#blog">博客</a>
+        <a href="#about">关于</a>
+        <a href="https://github.com/Nahzzz77" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
     </div>
-    <nav class="menu-overlay" id="menu-overlay">
-      <a href="#home">首页</a>
-      <a href="#about">关于</a>
-      <a href="#skills">技能</a>
-      <a href="#projects">项目</a>
-      <a href="#contact">联系</a>
-    </nav>
   </header>
 
-  <!-- 首屏：三栏（左标语 + 星图 logo + 右标语） -->
-  <section class="hero" id="home">
-    <img src="assets/hero-bg.webp" alt="" class="hero-bg" aria-hidden="true">
-    <div class="hero-overlay" aria-hidden="true"></div>
+  <main class="wrap">
 
-    <div class="container hero-inner">
-      <div class="future-grid">
-        <div class="future-split">
-          <p class="hero-slogan split-text" data-text="AI PRODUCT">AI PRODUCT</p>
+    <!-- 三张入口卡片 -->
+    <section class="hero-cards">
+      <a href="#blog" class="hcard">
+        <span class="hnum">3</span>
+        <span class="hbody">
+          <span class="htitle">博客</span>
+          <span class="hdesc">产品、AI、思考</span>
+        </span>
+        <span class="harrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="https://github.com/Nahzzz77" target="_blank" rel="noopener" class="hcard">
+        <span class="hnum">6</span>
+        <span class="hbody">
+          <span class="htitle">开源项目</span>
+          <span class="hdesc">GitHub 上的 side projects</span>
+        </span>
+        <span class="harrow" aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <!-- 主体：左文章 + 右侧边栏 -->
+    <div class="layout">
+
+      <!-- 左列：最近在写（这里就是写文章的地方，往下复制 .post 块即可） -->
+      <section class="main-col" id="blog">
+        <div class="sec-head">
+          <h2>最近在写</h2>
+          <a href="#blog">全部 →</a>
         </div>
-        <div class="future-center">
 
-        <div class="hero-logo" aria-label="张涵">
-          <div class="logo-pieces">
-            <svg viewBox="0 0 1000 1153" data-morph="M490 195C490 189.477 494.477 185 500 185V185C505.523 185 510 189.477 510 195V195C510 200.523 505.523 205 500 205V205C494.477 205 490 200.523 490 195V195Z" class="logo-piece top"><path fill="currentColor" d="M695.742 195.315C695.742 197.944 693.607 200.078 690.977 200.078C597.134 200.078 550.022 200.078 527.59 222.506C505.158 244.934 505.158 292.019 505.158 385.865C505.158 388.495 503.024 390.629 500.394 390.629C497.764 390.629 495.629 388.495 495.629 385.865C495.629 292.019 495.629 244.934 473.217 222.506C450.785 200.078 403.673 200.078 309.81 200.078C307.18 200.078 305.046 197.944 305.046 195.315C305.046 192.685 307.18 190.551 309.81 190.551C403.673 190.551 450.785 190.551 473.217 168.123C495.629 145.695 495.629 98.61 495.629 4.76377C495.629 2.13417 497.764 0 500.394 0C503.024 0 505.158 2.13417 505.158 4.76377C505.158 98.61 505.158 145.695 527.59 168.123C550.022 190.551 597.134 190.551 690.977 190.551C693.607 190.551 695.742 192.685 695.742 195.315Z"></path></svg>
-            <svg viewBox="0 0 1000 1153" data-morph="M162 386C162 380.477 166.477 376 172 376V376C177.523 376 182 380.477 182 386V386C182 391.523 177.523 396 172 396V396C166.477 396 162 391.523 162 386V386Z" class="logo-piece top-left"><path fill="currentColor" d="M343.036 481.151C342.56 481.112 342.084 481.17 341.626 481.284C340.464 481.608 339.396 482.37 338.729 483.513C337.891 484.962 337.91 486.657 338.615 488.048C337.853 488.048 337.09 487.839 336.404 487.439C336.328 487.401 336.252 487.343 336.175 487.305C336.137 487.286 336.099 487.267 336.061 487.229C255.006 440.449 210.627 414.625 180.019 422.819C149.411 431.031 125.874 471.771 79.0098 552.908C79.0098 552.908 78.9336 553.041 78.9145 553.098C78.0188 554.623 76.4179 555.48 74.7788 555.48C73.9784 555.48 73.1589 555.27 72.3966 554.832C70.8719 553.956 70.0143 552.355 70.0143 550.716C70.0143 549.897 70.2239 549.078 70.6622 548.334C70.6813 548.277 70.7194 548.201 70.7575 548.163C70.8147 548.049 70.8528 547.972 70.91 547.877C117.66 466.912 141.121 426.21 132.926 395.646C124.712 365.006 83.9268 341.454 2.64303 294.54C1.11837 293.663 0.260742 292.063 0.260742 290.424C0.260742 289.605 0.470384 288.785 0.889667 288.023C2.22375 285.755 5.13968 284.974 7.40762 286.289C7.48385 286.327 7.56009 286.384 7.63632 286.422L7.75067 286.48C88.8058 333.279 129.533 356.755 160.122 348.542C190.73 340.348 214.286 299.609 261.131 218.472C261.131 218.472 261.207 218.339 261.246 218.281C262.561 216.014 265.477 215.233 267.745 216.547C269.269 217.424 270.127 219.025 270.127 220.663C270.127 221.483 269.917 222.302 269.498 223.045C269.46 223.102 269.422 223.16 269.384 223.217C269.326 223.331 269.288 223.407 269.231 223.484C222.481 304.468 199.02 345.169 207.215 375.734C215.429 406.374 259.904 432.274 341.169 479.188C342.007 479.664 342.636 480.35 343.036 481.151Z"></path></svg>
-            <svg viewBox="0 0 1000 1153" data-morph="M818 386C818 380.477 822.477 376 828 376V376C833.523 376 838 380.477 838 386V386C838 391.523 833.523 396 828 396V396C822.477 396 818 391.523 818 386V386Z" class="logo-piece top-right"><path fill="currentColor" d="M731.759 216.459C734.027 215.145 736.942 215.926 738.257 218.213C738.295 218.27 738.334 218.327 738.372 218.384C785.217 299.539 808.773 340.26 839.381 348.473C869.989 356.666 910.754 333.152 991.942 286.296C991.943 286.277 991.981 286.277 992.019 286.258C992.038 286.239 992.077 286.22 992.096 286.201C994.364 284.887 997.279 285.668 998.613 287.954C999.033 288.697 999.242 289.517 999.242 290.336H999.223C999.223 291.975 998.365 293.576 996.841 294.452C996.803 294.471 996.783 294.49 996.745 294.509C996.726 294.528 996.707 294.528 996.688 294.547C915.519 341.403 874.753 364.955 866.558 395.558C858.363 426.141 881.824 466.844 928.574 547.809C928.631 547.885 928.669 547.98 928.707 548.056H928.727C928.765 548.113 928.802 548.17 928.821 548.228C929.26 548.99 929.47 549.809 929.47 550.609C929.47 552.248 928.612 553.849 927.087 554.744C926.325 555.163 925.505 555.373 924.705 555.373C923.066 555.373 921.465 554.516 920.569 552.991C920.531 552.934 920.512 552.877 920.474 552.819C873.628 471.683 850.092 430.944 819.465 422.75C788.857 414.537 744.683 440.038 663.494 486.895C663.475 486.914 663.456 486.914 663.437 486.933C663.399 486.952 663.38 486.971 663.342 486.971C662.522 487.447 661.607 487.657 660.73 487.6C660.732 487.598 660.733 487.596 660.734 487.595L660.442 487.574C658.988 487.428 657.633 486.589 656.847 485.231C656.408 484.469 656.198 483.65 656.198 482.85C656.217 481.956 656.445 481.101 656.919 480.34L657.076 480.101C657.46 479.555 657.96 479.086 658.577 478.72C658.615 478.701 658.653 478.7 658.672 478.682C658.672 478.663 658.71 478.663 658.729 478.644C739.918 431.787 784.074 406.267 792.288 375.664C800.483 345.081 777.021 304.379 730.271 223.414C730.214 223.319 730.176 223.243 730.119 223.167C730.119 223.167 730.043 223.034 730.005 222.977C729.567 222.214 729.376 221.395 729.376 220.595C729.376 218.937 730.234 217.336 731.759 216.459Z"></path></svg>
-            <svg viewBox="0 0 1000 1153" data-morph="M489 577C489 571.477 493.477 567 499 567V567C504.523 567 509 571.477 509 577V577C509 582.523 504.523 587 499 587V587C493.477 587 489 582.523 489 577V577Z" class="logo-piece center"><path fill="currentColor" d="M337.063 478.422C337.521 478.308 337.997 478.25 338.474 478.288C339.236 478.307 339.979 478.517 340.685 478.917L420.329 524.896C469.347 553.174 529.706 553.137 578.686 524.802L657.796 479.012C658.593 478.559 659.459 478.351 660.295 478.38C660.296 478.378 660.298 478.375 660.3 478.373C660.397 478.378 660.495 478.386 660.592 478.396C662.093 478.522 663.506 479.349 664.333 480.746C665.229 482.29 665.153 484.081 664.314 485.529C664.313 485.533 664.275 485.606 664.238 485.644C663.857 486.31 663.304 486.863 662.58 487.282L582.974 533.338C534.108 561.597 503.996 613.808 504.015 670.249V761.809C504.015 762.799 503.728 763.714 503.214 764.477C502.356 765.734 500.927 766.572 499.288 766.572C498.411 766.572 497.611 766.344 496.925 765.943C496.105 765.467 495.438 764.781 495.038 763.942C494.695 763.314 494.523 762.571 494.523 761.809L494.485 669.944C494.485 613.446 464.316 561.273 415.394 533.033L335.92 487.168C335.081 486.692 334.434 485.986 334.053 485.186C333.348 483.795 333.329 482.099 334.167 480.651C334.834 479.508 335.901 478.746 337.063 478.422Z"></path></svg>
-            <div class="logo-piece-chars"><span class="logo-word">张涵</span></div>
+        <article class="post">
+          <h3 class="post-title"><a href="https://www.woshipm.com/ai/6443369.html" target="_blank" rel="noopener">Agent 产品真正的门槛：从工具调用到不确定性管理</a></h3>
+          <div class="post-meta">
+            <span>2026-08-10</span>
+            <span>AI 产品</span>
           </div>
-        </div>
-        </div>
-        <div class="future-split is-right">
-          <p class="hero-slogan split-text" data-text="MANAGER">MANAGER</p>
-        </div>
-      </div>
+          <p class="post-excerpt">做一个项目时，我先向 AI 描述了大概想法，本想让需求先讨论清楚再执行。但 AI 没等讨论清楚，就根据有限信息自行补全了没说的部分——Agent 产品真正的门槛，不在工具调用，而在不确定性管理。</p>
+          <a class="post-more" href="https://www.woshipm.com/ai/6443369.html" target="_blank" rel="noopener">继续读 →</a>
+        </article>
 
-      <div class="hero-bottom">
-        <p class="hero-eyebrow">把复杂的想法，变成简单好用的产品</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-ghost">查看作品</a>
-          <a href="#contact" class="btn btn-rust">联系我</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 关于我 -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow-num">01</span> ABOUT</p>
-        <h2 class="section-title">关于我</h2>
-      </div>
-      <div class="about-grid reveal">
-        <div class="about-text">
-          <p>我是一名 AI 产品经理，专注把复杂的想法变成简单、好用的产品体验。这里可以介绍你的背景、经历和正在做的事情。</p>
-          <p>我喜欢学习新技术、解决有趣的问题，并与优秀的团队一起协作。业余时间我会写博客、参与开源项目、探索摄影和音乐。</p>
-          <div class="about-facts">
-            <div class="fact"><span class="fact-num">X+</span><span class="fact-label">年经验</span></div>
-            <div class="fact"><span class="fact-num">XX</span><span class="fact-label">完成项目</span></div>
-            <div class="fact"><span class="fact-num">XX</span><span class="fact-label">客户好评</span></div>
+        <article class="post">
+          <h3 class="post-title"><a href="https://mp.weixin.qq.com/s/T_uTZ1DlHaLOFTcta9_OUg" target="_blank" rel="noopener">同样是上传资料，为什么 NotebookLM 能让人越用越懂？</a></h3>
+          <div class="post-meta">
+            <span>2026-08-08</span>
+            <span>AI 产品</span>
           </div>
-        </div>
-        <div class="about-card">
-          <div class="avatar">张</div>
-          <h3>张涵</h3>
-          <p class="about-role">AI 产品经理</p>
-          <ul class="about-list">
-            <li><span>📍</span> 城市，中国</li>
-            <li><span>🎓</span> 学校 / 专业</li>
-            <li><span>💼</span> 公司 / 职位</li>
+          <p class="post-excerpt">从 Sources、Chat 到 Studio，拆解它如何把资料一步步变成知识产物。</p>
+          <a class="post-more" href="https://mp.weixin.qq.com/s/T_uTZ1DlHaLOFTcta9_OUg" target="_blank" rel="noopener">继续读 →</a>
+        </article>
+
+        <article class="post">
+          <h3 class="post-title"><a href="https://mp.weixin.qq.com/s/GBqDhXBJEVktxWwSieOByw" target="_blank" rel="noopener">AI 越来越像你，然后呢？我为什么仍没被 Second Me 说服</a></h3>
+          <div class="post-meta">
+            <span>2026-08-06</span>
+            <span>思考</span>
+          </div>
+          <p class="post-excerpt">给自己做一个 AI 分身，这件事确实容易勾起好奇心。但我真正印象深刻的是：注册之后，我很快就不知道下一步该做什么了。</p>
+          <a class="post-more" href="https://mp.weixin.qq.com/s/GBqDhXBJEVktxWwSieOByw" target="_blank" rel="noopener">继续读 →</a>
+        </article>
+
+        <!-- 下一篇文章：复制上面这段，改标题/日期/分类/摘要/链接 -->
+
+        <p class="view-all"><a href="#blog">查看全部 →</a></p>
+      </section>
+
+      <!-- 右侧边栏 -->
+      <aside class="sidebar">
+
+        <section class="side-sec" id="search">
+          <h3 class="side-title">搜索</h3>
+          <div class="search-box">
+            <input type="search" placeholder="搜索文章关键词…" aria-label="搜索文章关键词">
+          </div>
+        </section>
+
+        <section class="side-sec" id="about">
+          <h3 class="side-title">关于</h3>
+          <div class="about-box">
+            <!-- 替换成你的头像：<img class="avatar" src="头像地址" alt="张涵"> -->
+            <span class="avatar" aria-hidden="true">张</span>
+            <div class="about-text">
+              <p><strong>张涵</strong>，AI 产品经理。</p>
+              <p>专注把复杂的产品，做成简单的体验。</p>
+              <p>产品、AI、读书，持续记录。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="side-sec" id="wechat">
+          <h3 class="side-title">微信</h3>
+          <div class="wechat-box">
+            <img class="qr-img" src="assets/wechat-qr.jpg" alt="公众号二维码">
+            <p>扫码关注公众号</p>
+            <p class="wechat-id">个人微信 · zhanghan</p>
+          </div>
+        </section>
+
+        <section class="side-sec" id="recent">
+          <h3 class="side-title">近期文章</h3>
+          <ul class="side-list">
+            <li><a href="https://www.woshipm.com/ai/6443369.html" target="_blank" rel="noopener">Agent 产品真正的门槛：从工具调用到不确定性管理</a></li>
+            <li><a href="https://mp.weixin.qq.com/s/T_uTZ1DlHaLOFTcta9_OUg" target="_blank" rel="noopener">同样是上传资料，为什么 NotebookLM 能让人越用越懂？</a></li>
+            <li><a href="https://mp.weixin.qq.com/s/GBqDhXBJEVktxWwSieOByw" target="_blank" rel="noopener">AI 越来越像你，然后呢？我为什么仍没被 Second Me 说服</a></li>
+            <!-- 有新文章时在这里加 <li><a href="#">标题</a></li> -->
           </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- 技能 -->
-  <section class="section section-alt" id="skills">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow-num">02</span> SKILLS</p>
-        <h2 class="section-title">我的技能</h2>
-      </div>
-      <div class="skills-grid reveal">
-        <div class="skill"><div class="skill-head"><span>产品规划</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
-        <div class="skill"><div class="skill-head"><span>用户研究</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
-        <div class="skill"><div class="skill-head"><span>数据分析</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
-        <div class="skill"><div class="skill-head"><span>项目管理</span><span>75%</span></div><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
-      </div>
-      <div class="tech-tags reveal">
-        <span>PRD</span><span>竞品分析</span><span>用户访谈</span><span>数据分析</span>
-        <span>Axure</span><span>Figma</span><span>SQL</span><span>AI 应用</span>
-      </div>
-    </div>
-  </section>
+        <section class="side-sec" id="projects">
+          <h3 class="side-title">开源项目</h3>
+          <ul class="side-list">
+            <li><a href="https://github.com/Nahzzz77/aihanlab-skills" target="_blank" rel="noopener">aihanlab-skills</a></li>
+            <li><a href="https://github.com/Nahzzz77/trendpilot-ai-ecommerce-copilot" target="_blank" rel="noopener">trendpilot-ai-ecommerce-copilot</a></li>
+            <li><a href="https://github.com/Nahzzz77/aihanlab-competitive-analysis" target="_blank" rel="noopener">aihanlab-competitive-analysis</a></li>
+            <li><a href="https://github.com/Nahzzz77/human-writing" target="_blank" rel="noopener">human-writing</a></li>
+            <li><a href="https://github.com/Nahzzz77/architecture-decomposition-skill" target="_blank" rel="noopener">architecture-decomposition-skill</a></li>
+            <li><a href="https://github.com/Nahzzz77/Nahzzz77.github.io" target="_blank" rel="noopener">Nahzzz77.github.io</a></li>
+          </ul>
+        </section>
 
-  <!-- 项目 -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow-num">03</span> PROJECTS</p>
-        <h2 class="section-title">我的项目</h2>
-      </div>
-      <div class="projects-grid reveal">
-        <article class="project">
-          <div class="project-top"><span class="project-badge">01</span><span class="project-year">2024</span></div>
-          <h3>项目名称一</h3>
-          <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
-          <div class="project-tags"><span>AI 产品</span><span>从 0 到 1</span></div>
-          <a href="#" class="project-link">了解更多 →</a>
-        </article>
-        <article class="project">
-          <div class="project-top"><span class="project-badge">02</span><span class="project-year">2023</span></div>
-          <h3>项目名称二</h3>
-          <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
-          <div class="project-tags"><span>移动端</span><span>增长</span></div>
-          <a href="#" class="project-link">了解更多 →</a>
-        </article>
-        <article class="project">
-          <div class="project-top"><span class="project-badge">03</span><span class="project-year">2023</span></div>
-          <h3>项目名称三</h3>
-          <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
-          <div class="project-tags"><span>大模型</span><span>Agent</span></div>
-          <a href="#" class="project-link">了解更多 →</a>
-        </article>
-      </div>
-    </div>
-  </section>
+        <section class="side-sec" id="media">
+          <h3 class="side-title">媒体报道</h3>
+          <ul class="side-list">
+            <li><a href="#">【媒体名】AI 产品经理如何把 demo 变成产品</a></li>
+            <li><a href="#">【媒体名】大模型落地的最后一公里</a></li>
+          </ul>
+        </section>
 
-  <!-- 联系 -->
-  <section class="section section-bone" id="contact">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow eyebrow-dark"><span class="eyebrow-num">04</span> CONTACT</p>
-        <h2 class="section-title">联系我</h2>
-      </div>
-      <p class="contact-intro reveal">有项目想合作，或者只是想打个招呼？欢迎随时联系我。</p>
-      <div class="contact-grid reveal">
-        <a href="mailto:you@example.com" class="contact-item"><span class="contact-label">邮箱</span><span class="contact-value">you@example.com</span></a>
-        <a href="#" class="contact-item"><span class="contact-label">GitHub</span><span class="contact-value">github.com/yourname</span></a>
-        <a href="#" class="contact-item"><span class="contact-label">LinkedIn</span><span class="contact-value">linkedin.com/in/yourname</span></a>
-        <a href="#" class="contact-item"><span class="contact-label">微信</span><span class="contact-value">微信号</span></a>
-      </div>
-    </div>
-  </section>
+        <section class="side-sec" id="links">
+          <h3 class="side-title">外站</h3>
+          <ul class="side-list">
+            <li><a href="https://github.com/Nahzzz77" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.woshipm.com/u/yourname" target="_blank" rel="noopener">人人都是产品经理</a></li>
+            <li><a href="#">公众号</a></li>
+          </ul>
+        </section>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span class="footer-brand">张涵<span class="rust">.</span></span>
-      <span class="footer-mono">© <span id="year"></span> ZHANG HAN</span>
+      </aside>
+    </div>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <nav class="footer-nav" aria-label="页脚导航">
+        <a href="https://github.com/Nahzzz77" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.woshipm.com/u/yourname" target="_blank" rel="noopener">人人都是产品经理</a>
+        <a href="#blog">博客</a>
+        <a href="#about">关于</a>
+      </nav>
+      <p class="copyright">© <span id="year"></span> 张涵 · 把复杂变简单</p>
     </div>
   </footer>
 

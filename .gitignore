@@ -8,3 +8,6 @@ Thumbs.db
 # 编辑器
 .vscode/
 .idea/
+
+# 非网站内容
+docs/

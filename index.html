@@ -1,88 +1,101 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="张涵 - AI 产品经理的个人主页">
-  <title>张涵 | 个人网站</title>
+  <title>张涵 · AI 产品经理</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@360;400;480;500;530;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Roboto+Mono:wght@400&family=Inter:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- 顶部新闻条 -->
+  <div class="newsbar">
+    <span class="newsbar-text">AI 产品经理 · 张涵 · 个人网站 · 2026</span>
+  </div>
 
   <!-- 导航栏 -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#home" class="logo">张涵<span>.</span></a>
+      <a href="#home" class="logo">
+        <svg class="logo-mark" viewBox="0 0 40 40" width="22" height="22" aria-hidden="true">
+          <path d="M20 2 L24 16 L38 20 L24 24 L20 38 L16 24 L2 20 L16 16 Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <rect x="16" y="16" width="8" height="8" transform="rotate(45 20 20)" fill="none" stroke="#cc6437" stroke-width="1.2"/>
+        </svg>
+        <span class="logo-text">张涵</span>
+      </a>
       <nav class="nav-links" id="nav-links">
         <a href="#home" class="active">首页</a>
-        <a href="#about">关于我</a>
+        <a href="#about">关于</a>
         <a href="#skills">技能</a>
         <a href="#projects">项目</a>
         <a href="#contact">联系</a>
       </nav>
-      <a href="#contact" class="btn btn-nav">联系我</a>
+      <a href="#contact" class="btn btn-ghost btn-nav">联系我</a>
       <button class="menu-toggle" id="menu-toggle" aria-label="打开菜单">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- 首屏：复刻 Mercury hero -->
+  <!-- 首屏 -->
   <section class="hero" id="home">
-    <img src="assets/hero-bg.jpg" alt="背景" class="hero-bg" aria-hidden="true">
-    <div class="hero-gradient" aria-hidden="true"></div>
-    <div class="hero-grain" aria-hidden="true"></div>
+    <img src="assets/hero-bg.webp" alt="" class="hero-bg" aria-hidden="true">
+    <div class="hero-overlay" aria-hidden="true"></div>
 
     <div class="container hero-inner">
-      <p class="hero-kicker">AI 产品经理</p>
+      <svg class="hero-mark" viewBox="0 0 100 100" width="72" height="72" aria-hidden="true">
+        <path d="M50 6 L56 44 L94 50 L56 56 L50 94 L44 56 L6 50 L44 44 Z" fill="none" stroke="#ffffff" stroke-width="1"/>
+        <rect x="38" y="38" width="24" height="24" transform="rotate(45 50 50)" fill="none" stroke="#cc6437" stroke-width="1"/>
+      </svg>
+      <p class="hero-eyebrow">AI PRODUCT MANAGER</p>
       <h1 class="hero-title">张涵</h1>
-      <p class="hero-subtitle" id="typed"></p>
-      <p class="hero-desc">
-        热爱创造优雅、实用的产品。专注于把复杂的想法变成简单、好用的体验。
-      </p>
-
-      <div class="hero-cta">
-        <form class="cta-box" id="cta-form" novalidate>
-          <input type="email" id="cta-email" placeholder="输入邮箱，与我联系" aria-label="邮箱">
-          <button type="submit" class="btn btn-primary">联系我</button>
-        </form>
-        <a href="#projects" class="btn btn-ghost">查看我的作品</a>
-      </div>
-
-      <div class="hero-social">
-        <a href="#">GitHub</a>
-        <a href="#">微博</a>
-        <a href="#">邮箱</a>
+      <p class="hero-subtitle">把复杂的想法，变成简单好用的产品。</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-ghost">查看作品</a>
+        <a href="#contact" class="btn btn-ghost btn-rust">联系我</a>
       </div>
     </div>
 
-    <a href="#about" class="scroll-down" aria-label="向下滚动">↓</a>
+    <a href="#about" class="scroll-down" aria-label="向下滚动">
+      <span>SCROLL</span>
+      <span class="scroll-line"></span>
+    </a>
   </section>
 
   <!-- 关于我 -->
   <section class="section" id="about">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-index">01</span>
+        <p class="eyebrow"><span class="eyebrow-num">01</span> ABOUT</p>
         <h2 class="section-title">关于我</h2>
       </div>
       <div class="about-grid reveal">
         <div class="about-text">
           <p>
-            这里写一段自我介绍。可以介绍你的背景、经历、兴趣，以及你正在做的事情。
-            比如：我是一名 AI 产品经理，拥有 X 年经验，专注于构建高质量的数字产品。
+            我是一名 AI 产品经理，专注把复杂的想法变成简单、好用的产品体验。
+            这里可以介绍你的背景、经历和正在做的事情。
           </p>
           <p>
             我喜欢学习新技术、解决有趣的问题，并与优秀的团队一起协作。
             业余时间我会写博客、参与开源项目、探索摄影和音乐。
           </p>
           <div class="about-facts">
-            <div class="fact"><span class="fact-num">X+</span><span class="fact-label">年经验</span></div>
-            <div class="fact"><span class="fact-num">XX</span><span class="fact-label">完成项目</span></div>
-            <div class="fact"><span class="fact-num">XX</span><span class="fact-label">客户好评</span></div>
+            <div class="fact">
+              <span class="fact-num">X+</span>
+              <span class="fact-label">年经验</span>
+            </div>
+            <div class="fact">
+              <span class="fact-num">XX</span>
+              <span class="fact-label">完成项目</span>
+            </div>
+            <div class="fact">
+              <span class="fact-num">XX</span>
+              <span class="fact-label">客户好评</span>
+            </div>
           </div>
         </div>
         <div class="about-card">
@@ -103,7 +116,7 @@
   <section class="section section-alt" id="skills">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-index">02</span>
+        <p class="eyebrow"><span class="eyebrow-num">02</span> SKILLS</p>
         <h2 class="section-title">我的技能</h2>
       </div>
       <div class="skills-grid reveal">
@@ -135,76 +148,66 @@
   <section class="section" id="projects">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-index">03</span>
+        <p class="eyebrow"><span class="eyebrow-num">03</span> PROJECTS</p>
         <h2 class="section-title">我的项目</h2>
       </div>
       <div class="projects-grid reveal">
         <article class="project">
           <div class="project-top">
-            <span class="project-icon">🖥️</span>
+            <span class="project-badge">01</span>
             <span class="project-year">2024</span>
           </div>
-          <div class="project-body">
-            <h3>项目名称一</h3>
-            <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
-            <div class="project-tags"><span>AI 产品</span><span>从 0 到 1</span></div>
-            <a href="#" class="project-link">了解更多 →</a>
-          </div>
+          <h3>项目名称一</h3>
+          <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
+          <div class="project-tags"><span>AI 产品</span><span>从 0 到 1</span></div>
+          <a href="#" class="project-link">了解更多 →</a>
         </article>
         <article class="project">
           <div class="project-top">
-            <span class="project-icon">📱</span>
+            <span class="project-badge">02</span>
             <span class="project-year">2023</span>
           </div>
-          <div class="project-body">
-            <h3>项目名称二</h3>
-            <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
-            <div class="project-tags"><span>移动端</span><span>增长</span></div>
-            <a href="#" class="project-link">了解更多 →</a>
-          </div>
+          <h3>项目名称二</h3>
+          <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
+          <div class="project-tags"><span>移动端</span><span>增长</span></div>
+          <a href="#" class="project-link">了解更多 →</a>
         </article>
         <article class="project">
           <div class="project-top">
-            <span class="project-icon">🤖</span>
+            <span class="project-badge">03</span>
             <span class="project-year">2023</span>
           </div>
-          <div class="project-body">
-            <h3>项目名称三</h3>
-            <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
-            <div class="project-tags"><span>大模型</span><span>Agent</span></div>
-            <a href="#" class="project-link">了解更多 →</a>
-          </div>
+          <h3>项目名称三</h3>
+          <p>简短描述这个项目做了什么、解决了什么问题、用到了哪些技术。</p>
+          <div class="project-tags"><span>大模型</span><span>Agent</span></div>
+          <a href="#" class="project-link">了解更多 →</a>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- 联系 -->
-  <section class="section section-alt" id="contact">
+  <!-- 联系（浅色段：唯一亮色，戏剧性对比） -->
+  <section class="section section-bone" id="contact">
     <div class="container">
       <div class="section-head reveal">
-        <span class="section-index">04</span>
+        <p class="eyebrow eyebrow-dark"><span class="eyebrow-num">04</span> CONTACT</p>
         <h2 class="section-title">联系我</h2>
       </div>
-      <p class="contact-intro reveal">有项目想合作，或者只是想打个招呼？欢迎随时联系我！</p>
+      <p class="contact-intro reveal">有项目想合作，或者只是想打个招呼？欢迎随时联系我。</p>
       <div class="contact-grid reveal">
         <a href="mailto:you@example.com" class="contact-item">
-          <span class="contact-icon">✉️</span>
           <span class="contact-label">邮箱</span>
           <span class="contact-value">you@example.com</span>
         </a>
         <a href="#" class="contact-item">
-          <span class="contact-icon">🐙</span>
           <span class="contact-label">GitHub</span>
           <span class="contact-value">github.com/yourname</span>
         </a>
         <a href="#" class="contact-item">
-          <span class="contact-icon">💼</span>
           <span class="contact-label">LinkedIn</span>
           <span class="contact-value">linkedin.com/in/yourname</span>
         </a>
         <a href="#" class="contact-item">
-          <span class="contact-icon">📱</span>
           <span class="contact-label">微信</span>
           <span class="contact-value">微信号</span>
         </a>
@@ -214,8 +217,9 @@
 
   <!-- 页脚 -->
   <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> 张涵 · 用心制作</p>
+    <div class="container footer-inner">
+      <span class="footer-brand">张涵<span class="rust">.</span></span>
+      <span class="footer-mono">© <span id="year"></span> ZHANG HAN</span>
     </div>
   </footer>
 

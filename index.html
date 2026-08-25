@@ -3,215 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="张涵 - AI 产品经理的博客">
-  <title>张涵的博客 · 把复杂变简单</title>
+  <meta name="description" content="张涵的个人网站。关注 AI Agent、产品体验与不确定性管理，持续分享 AI 产品思考与实践。">
+  <meta name="theme-color" content="#fbfbf7">
+  <link rel="canonical" href="https://nahzzz77.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nahzzz77.github.io/">
+  <meta property="og:title" content="张涵 · AI 产品经理">
+  <meta property="og:description" content="把复杂的 AI，做成清楚、可信的产品。">
+  <meta property="og:image" content="https://nahzzz77.github.io/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="张涵 · AI 产品经理">
+  <meta name="twitter:description" content="把复杂的 AI，做成清楚、可信的产品。">
+  <meta name="twitter:image" content="https://nahzzz77.github.io/assets/og-card.png">
+  <title>张涵 · AI 产品经理</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260825-contact">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
 
-  <!-- 头部：站名 + 标语 + 导航 -->
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a href="#" class="site-title">
-        张涵
-        <span class="tagline">把复杂变简单</span>
+  <header class="site-header" id="top">
+    <div class="site-shell header-inner">
+      <a class="brand" href="#top" aria-label="张涵的个人网站首页">
+        <span>ZHANG HAN</span><i aria-hidden="true"></i>
       </a>
-      <nav class="nav" aria-label="主导航">
-        <a href="#" class="active">首页</a>
-        <a href="#blog">博客</a>
+      <nav class="nav" id="main-nav" aria-label="主导航">
+        <a class="active" href="#top">首页</a>
+        <a href="#writing">写作</a>
+        <a href="#projects">项目</a>
         <a href="#about">关于</a>
-        <a href="https://github.com/Nahzzz77" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
+      <a class="header-cta" href="#about">认识我</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="打开导航菜单">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <main class="wrap">
-
-    <!-- 三张入口卡片 -->
-    <section class="hero-cards">
-      <a href="#blog" class="hcard">
-        <span class="hnum">6</span>
-        <span class="hbody">
-          <span class="htitle">博客</span>
-          <span class="hdesc">产品、AI、思考</span>
-        </span>
-        <span class="harrow" aria-hidden="true">→</span>
-      </a>
-
-      <a href="https://github.com/Nahzzz77" target="_blank" rel="noopener" class="hcard">
-        <span class="hnum">6</span>
-        <span class="hbody">
-          <span class="htitle">开源项目</span>
-          <span class="hdesc">GitHub 上的 side projects</span>
-        </span>
-        <span class="harrow" aria-hidden="true">→</span>
-      </a>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="site-shell hero-copy reveal is-visible">
+        <p class="eyebrow">AI 产品经理 · BUILDER · WRITER</p>
+        <h1 id="hero-title">把复杂的 AI，<br><span>做成清楚、可信的产品。</span></h1>
+        <p class="hero-lede">我叫张涵，关注 AI Agent、产品体验与不确定性管理。把模糊的问题拆清楚，再让技术真正服务于人。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">查看我的工作</a>
+          <a class="button button-quiet" href="#writing">阅读最新文章 <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <figure class="hero-visual reveal is-visible">
+        <div class="hero-image-wrap">
+          <img src="assets/hero-landscape.jpg" alt="群山、溪流与草甸组成的宁静山谷" width="1792" height="896" fetchpriority="high">
+        </div>
+        <figcaption class="hero-caption">
+          <span><b>Current focus</b> AI Agent 产品设计</span>
+          <span>Scroll to explore <i aria-hidden="true">↓</i></span>
+        </figcaption>
+      </figure>
     </section>
 
-    <!-- 主体：左文章 + 右侧边栏 -->
-    <div class="layout">
+    <section class="manifesto section site-shell reveal" aria-labelledby="manifesto-title">
+      <div class="section-kicker"><span>01</span><p>我的方法</p></div>
+      <div class="manifesto-copy">
+        <h2 id="manifesto-title">先把问题拆清楚，<br>再决定 AI 应该做什么。</h2>
+        <p>我不把“接入大模型”当成产品答案。真正重要的是明确用户目标、执行边界、失败路径和责任归属，再选择合适的模型与交互。</p>
+        <ul class="principle-list" aria-label="工作原则">
+          <li><span>01</span><strong>从真实问题出发</strong><small>先验证需求，再讨论技术。</small></li>
+          <li><span>02</span><strong>把不确定性设计出来</strong><small>让系统知道何时执行、询问与停止。</small></li>
+          <li><span>03</span><strong>用证据而不是口号</strong><small>通过原型、评测和复盘验证判断。</small></li>
+        </ul>
+      </div>
+    </section>
 
-      <!-- 左列：最近在写（这里就是写文章的地方，往下复制 .post 块即可） -->
-      <section class="main-col" id="blog">
-        <div class="sec-head">
-          <h2>最近在写</h2>
-          <a href="#blog">全部 →</a>
+    <section class="featured section" id="writing" aria-labelledby="featured-title">
+      <div class="site-shell">
+        <div class="section-head reveal">
+          <div class="section-kicker"><span>02</span><p>精选写作</p></div>
+          <h2 id="featured-title">最近在思考的事</h2>
+          <p>围绕 AI 产品、Agent 与真实使用体验，记录判断形成的过程。</p>
         </div>
+        <div class="featured-grid">
+          <article class="feature-card feature-card-main reveal">
+            <a href="https://mp.weixin.qq.com/s/162_W_lTfqNt-93WuI0VTg" target="_blank" rel="noopener">
+              <div class="card-top"><span>01</span><span>AI 产品 · 2026.08.25</span></div>
+              <div class="card-body"><p class="card-label">FEATURED ESSAY</p><h3>Ox Alpha 没有公布开发者，几天内跑出了 8 万亿 token</h3><p>从匿名发布、第三方平台试用和数据规则出发，分析“先开放、后揭晓”模式把哪些风险交给了使用者。</p></div>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article class="feature-card reveal">
+            <a href="https://www.woshipm.com/ai/6452614.html" target="_blank" rel="noopener">
+              <div class="card-top"><span>02</span><span>AI 产品 · 2026.08.23</span></div>
+              <div class="card-body"><p class="card-label">PRODUCT NOTES</p><h3>Agent 能改文件以后，产品经理要补一张执行责任表</h3><p>当 Agent 能修改文件和调用工具，审批、权限、记录与异常处理必须被重新设计。</p></div>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+          <article class="feature-card reveal">
+            <a href="https://mp.weixin.qq.com/s/7BqsxanBY8WiCV2g-5zq6Q" target="_blank" rel="noopener">
+              <div class="card-top"><span>03</span><span>AI 产品 · 2026.08.18</span></div>
+              <div class="card-body"><p class="card-label">AGENT SYSTEMS</p><h3>DeepSeek Harness 来了，Agent 终于有了自己的运行环境</h3><p>模型负责判断下一步，Harness 负责让这一步在真实环境里安全发生。</p></div>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <article class="post">
-          <h3 class="post-title"><a href="https://mp.weixin.qq.com/s/162_W_lTfqNt-93WuI0VTg" target="_blank" rel="noopener">Ox Alpha 没有公布开发者，几天内跑出了 8 万亿 token</a></h3>
-          <div class="post-meta">
-            <span>2026-08-25</span>
-            <span>AI 产品</span>
+    <section class="writing-index section site-shell" aria-labelledby="writing-title">
+      <div class="index-head reveal">
+        <div><p class="eyebrow">WRITING INDEX</p><h2 id="writing-title">全部文章</h2></div>
+        <label class="search-field"><span class="sr-only">搜索文章</span><input id="article-search" type="search" placeholder="搜索标题或主题" autocomplete="off"><i aria-hidden="true">⌕</i></label>
+      </div>
+      <div class="article-list" id="article-list">
+        <article class="article-row reveal" data-search="Ox Alpha 开发者 8 万亿 token 匿名 模型 AI 产品"><a href="https://mp.weixin.qq.com/s/162_W_lTfqNt-93WuI0VTg" target="_blank" rel="noopener"><span class="article-date">2026.08.25</span><span class="article-topic">AI 产品</span><h3>Ox Alpha 没有公布开发者，几天内跑出了 8 万亿 token</h3><span class="article-arrow" aria-hidden="true">↗</span></a></article>
+        <article class="article-row reveal" data-search="Agent 改文件 产品经理 执行责任表 权限 AI 产品"><a href="https://www.woshipm.com/ai/6452614.html" target="_blank" rel="noopener"><span class="article-date">2026.08.23</span><span class="article-topic">AI 产品</span><h3>Agent 能改文件以后，产品经理要补一张执行责任表</h3><span class="article-arrow" aria-hidden="true">↗</span></a></article>
+        <article class="article-row reveal" data-search="DeepSeek Harness Agent 运行环境 插件 权限 AI 产品"><a href="https://mp.weixin.qq.com/s/7BqsxanBY8WiCV2g-5zq6Q" target="_blank" rel="noopener"><span class="article-date">2026.08.18</span><span class="article-topic">AI 产品</span><h3>DeepSeek Harness 来了，Agent 终于有了自己的运行环境</h3><span class="article-arrow" aria-hidden="true">↗</span></a></article>
+        <article class="article-row reveal" data-search="Agent 门槛 工具调用 不确定性管理 AI 产品"><a href="https://www.woshipm.com/ai/6443369.html" target="_blank" rel="noopener"><span class="article-date">2026.08.10</span><span class="article-topic">AI 产品</span><h3>Agent 产品真正的门槛：从工具调用到不确定性管理</h3><span class="article-arrow" aria-hidden="true">↗</span></a></article>
+        <article class="article-row reveal" data-search="NotebookLM Sources Chat Studio 资料 知识产品 AI 产品"><a href="https://mp.weixin.qq.com/s/T_uTZ1DlHaLOFTcta9_OUg" target="_blank" rel="noopener"><span class="article-date">2026.08.08</span><span class="article-topic">AI 产品</span><h3>同样是上传资料，为什么 NotebookLM 能让人越用越懂？</h3><span class="article-arrow" aria-hidden="true">↗</span></a></article>
+        <article class="article-row reveal" data-search="Second Me AI 分身 使用体验 思考"><a href="https://mp.weixin.qq.com/s/GBqDhXBJEVktxWwSieOByw" target="_blank" rel="noopener"><span class="article-date">2026.08.06</span><span class="article-topic">思考</span><h3>AI 越来越像你，然后呢？我为什么仍没被 Second Me 说服</h3><span class="article-arrow" aria-hidden="true">↗</span></a></article>
+      </div>
+      <p class="search-status" id="search-status" aria-live="polite"></p>
+    </section>
+
+    <section class="projects section" id="projects" aria-labelledby="projects-title">
+      <div class="site-shell">
+        <div class="section-head projects-head reveal">
+          <div class="section-kicker"><span>03</span><p>开源项目</p></div>
+          <h2 id="projects-title">把想法做成可以运行的东西</h2>
+          <p>用真实项目检验产品判断，也把可复用的方法开放出来。</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card reveal"><a href="https://github.com/Nahzzz77/aihanlab-skills" target="_blank" rel="noopener"><div class="project-meta"><span>01</span><span>AI WORKFLOW</span></div><h3>AI Skills Lab</h3><p>把重复的 AI 协作方法整理成可复用 Skill，降低从提示词到稳定执行流程的摩擦。</p><span class="project-link">查看 GitHub <i aria-hidden="true">↗</i></span></a></article>
+          <article class="project-card reveal"><a href="https://github.com/Nahzzz77/trendpilot-ai-ecommerce-copilot" target="_blank" rel="noopener"><div class="project-meta"><span>02</span><span>AI COPILOT</span></div><h3>TrendPilot</h3><p>围绕电商趋势发现、信息判断与下一步行动，探索 AI Copilot 的产品形态。</p><span class="project-link">查看 GitHub <i aria-hidden="true">↗</i></span></a></article>
+          <article class="project-card reveal"><a href="https://github.com/Nahzzz77/aihanlab-competitive-analysis" target="_blank" rel="noopener"><div class="project-meta"><span>03</span><span>PRODUCT RESEARCH</span></div><h3>Competitive Analysis</h3><p>将竞品拆解、证据整理和结论形成串成一套可复用的 AI 辅助研究流程。</p><span class="project-link">查看 GitHub <i aria-hidden="true">↗</i></span></a></article>
+        </div>
+        <a class="all-projects reveal" href="https://github.com/Nahzzz77" target="_blank" rel="noopener"><span>查看全部开源项目</span><i aria-hidden="true">↗</i></a>
+      </div>
+    </section>
+
+    <section class="about section site-shell" id="about" aria-labelledby="about-title">
+      <div class="section-kicker reveal"><span>04</span><p>关于我</p></div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <h2 id="about-title"><span class="about-title-first">保持好奇，</span><span class="about-title-muted">也保持怀疑。</span></h2>
+          <p>我是张涵，一名 AI 产品经理。我关心的不只是模型能做什么，更关心人在什么场景里愿意相信它、如何控制它，以及出错以后谁来承担责任。</p>
+          <p>这里记录我的产品研究、实践项目和仍在形成中的判断。欢迎因为文章、项目或一个具体问题来找我交流。</p>
+          <div class="about-links"><a href="https://github.com/Nahzzz77" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.woshipm.com/u/1684509" target="_blank" rel="noopener">人人都是产品经理 ↗</a></div>
+          <div class="personal-wechat" aria-label="个人微信号 zhanghan20030822">
+            <span><b>PERSONAL WECHAT</b><small>个人微信号</small></span>
+            <strong>zhanghan20030822</strong>
           </div>
-          <p class="post-excerpt">一个没有公开开发者身份的模型，几天内在公开平台跑出约 8 万亿 token。本文不做能力评测，而是从匿名发布、第三方平台试用和数据规则出发，分析这类“先开放、后揭晓”模式把哪些风险交给了使用者。</p>
-          <a class="post-more" href="https://mp.weixin.qq.com/s/162_W_lTfqNt-93WuI0VTg" target="_blank" rel="noopener">继续读 →</a>
-        </article>
-
-        <article class="post">
-          <h3 class="post-title"><a href="https://www.woshipm.com/ai/6452614.html" target="_blank" rel="noopener">Agent 能改文件以后，产品经理要补一张执行责任表</a></h3>
-          <div class="post-meta">
-            <span>2026-08-23</span>
-            <span>AI 产品</span>
-          </div>
-          <p class="post-excerpt">当 Agent 从回答问题走到修改文件、运行命令和调用外部工具，产品设计必须把动作、权限与责任边界说清楚。本文用一张执行责任表，拆解审批、执行记录、插件与异常处理该如何落地。</p>
-          <a class="post-more" href="https://www.woshipm.com/ai/6452614.html" target="_blank" rel="noopener">继续读 →</a>
-        </article>
-
-        <article class="post">
-          <h3 class="post-title"><a href="https://mp.weixin.qq.com/s/7BqsxanBY8WiCV2g-5zq6Q" target="_blank" rel="noopener">DeepSeek Harness 来了，Agent 终于有了自己的运行环境</a></h3>
-          <div class="post-meta">
-            <span>2026-08-18</span>
-            <span>AI 产品</span>
-          </div>
-          <p class="post-excerpt">模型负责判断下一步，Harness 负责让这一步在真实环境中发生。本文从插件、运行模式、执行轨迹、权限与数据边界，拆解 Agent 为什么开始从模型能力竞争转向运行环境竞争。</p>
-          <a class="post-more" href="https://mp.weixin.qq.com/s/7BqsxanBY8WiCV2g-5zq6Q" target="_blank" rel="noopener">继续读 →</a>
-        </article>
-
-        <article class="post">
-          <h3 class="post-title"><a href="https://www.woshipm.com/ai/6443369.html" target="_blank" rel="noopener">Agent 产品真正的门槛：从工具调用到不确定性管理</a></h3>
-          <div class="post-meta">
-            <span>2026-08-10</span>
-            <span>AI 产品</span>
-          </div>
-          <p class="post-excerpt">做一个项目时，我先向 AI 描述了大概想法，本想让需求先讨论清楚再执行。但 AI 没等讨论清楚，就根据有限信息自行补全了没说的部分——Agent 产品真正的门槛，不在工具调用，而在不确定性管理。</p>
-          <a class="post-more" href="https://www.woshipm.com/ai/6443369.html" target="_blank" rel="noopener">继续读 →</a>
-        </article>
-
-        <article class="post">
-          <h3 class="post-title"><a href="https://mp.weixin.qq.com/s/T_uTZ1DlHaLOFTcta9_OUg" target="_blank" rel="noopener">同样是上传资料，为什么 NotebookLM 能让人越用越懂？</a></h3>
-          <div class="post-meta">
-            <span>2026-08-08</span>
-            <span>AI 产品</span>
-          </div>
-          <p class="post-excerpt">从 Sources、Chat 到 Studio，拆解它如何把资料一步步变成知识产物。</p>
-          <a class="post-more" href="https://mp.weixin.qq.com/s/T_uTZ1DlHaLOFTcta9_OUg" target="_blank" rel="noopener">继续读 →</a>
-        </article>
-
-        <article class="post">
-          <h3 class="post-title"><a href="https://mp.weixin.qq.com/s/GBqDhXBJEVktxWwSieOByw" target="_blank" rel="noopener">AI 越来越像你，然后呢？我为什么仍没被 Second Me 说服</a></h3>
-          <div class="post-meta">
-            <span>2026-08-06</span>
-            <span>思考</span>
-          </div>
-          <p class="post-excerpt">给自己做一个 AI 分身，这件事确实容易勾起好奇心。但我真正印象深刻的是：注册之后，我很快就不知道下一步该做什么了。</p>
-          <a class="post-more" href="https://mp.weixin.qq.com/s/GBqDhXBJEVktxWwSieOByw" target="_blank" rel="noopener">继续读 →</a>
-        </article>
-
-        <!-- 下一篇文章：复制上面这段，改标题/日期/分类/摘要/链接 -->
-
-        <p class="view-all"><a href="#blog">查看全部 →</a></p>
-      </section>
-
-      <!-- 右侧边栏 -->
-      <aside class="sidebar">
-
-        <section class="side-sec" id="search">
-          <h3 class="side-title">搜索</h3>
-          <div class="search-box">
-            <input type="search" placeholder="搜索文章关键词…" aria-label="搜索文章关键词">
-          </div>
-        </section>
-
-        <section class="side-sec" id="about">
-          <h3 class="side-title">关于</h3>
-          <div class="about-box">
-            <!-- 替换成你的头像：<img class="avatar" src="头像地址" alt="张涵"> -->
-            <span class="avatar" aria-hidden="true">张</span>
-            <div class="about-text">
-              <p><strong>张涵</strong>，AI 产品经理。</p>
-              <p>专注把复杂的产品，做成简单的体验。</p>
-              <p>产品、AI、读书，持续记录。</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="side-sec" id="wechat">
-          <h3 class="side-title">微信</h3>
-          <div class="wechat-box">
-            <img class="qr-img" src="assets/wechat-qr.jpg" alt="公众号二维码">
-            <p>扫码关注公众号</p>
-            <p class="wechat-id">个人微信 · zhanghan20030822</p>
-          </div>
-        </section>
-
-        <section class="side-sec" id="recent">
-          <h3 class="side-title">近期文章</h3>
-          <ul class="side-list">
-            <li><a href="https://mp.weixin.qq.com/s/162_W_lTfqNt-93WuI0VTg" target="_blank" rel="noopener">Ox Alpha 没有公布开发者，几天内跑出了 8 万亿 token</a></li>
-            <li><a href="https://www.woshipm.com/ai/6452614.html" target="_blank" rel="noopener">Agent 能改文件以后，产品经理要补一张执行责任表</a></li>
-            <li><a href="https://mp.weixin.qq.com/s/7BqsxanBY8WiCV2g-5zq6Q" target="_blank" rel="noopener">DeepSeek Harness 来了，Agent 终于有了自己的运行环境</a></li>
-            <li><a href="https://www.woshipm.com/ai/6443369.html" target="_blank" rel="noopener">Agent 产品真正的门槛：从工具调用到不确定性管理</a></li>
-            <li><a href="https://mp.weixin.qq.com/s/T_uTZ1DlHaLOFTcta9_OUg" target="_blank" rel="noopener">同样是上传资料，为什么 NotebookLM 能让人越用越懂？</a></li>
-            <li><a href="https://mp.weixin.qq.com/s/GBqDhXBJEVktxWwSieOByw" target="_blank" rel="noopener">AI 越来越像你，然后呢？我为什么仍没被 Second Me 说服</a></li>
-            <!-- 有新文章时在这里加 <li><a href="#">标题</a></li> -->
-          </ul>
-        </section>
-
-        <section class="side-sec" id="projects">
-          <h3 class="side-title">开源项目</h3>
-          <ul class="side-list">
-            <li><a href="https://github.com/Nahzzz77/aihanlab-skills" target="_blank" rel="noopener">aihanlab-skills</a></li>
-            <li><a href="https://github.com/Nahzzz77/trendpilot-ai-ecommerce-copilot" target="_blank" rel="noopener">trendpilot-ai-ecommerce-copilot</a></li>
-            <li><a href="https://github.com/Nahzzz77/aihanlab-competitive-analysis" target="_blank" rel="noopener">aihanlab-competitive-analysis</a></li>
-            <li><a href="https://github.com/Nahzzz77/human-writing" target="_blank" rel="noopener">human-writing</a></li>
-            <li><a href="https://github.com/Nahzzz77/architecture-decomposition-skill" target="_blank" rel="noopener">architecture-decomposition-skill</a></li>
-            <li><a href="https://github.com/Nahzzz77/Nahzzz77.github.io" target="_blank" rel="noopener">Nahzzz77.github.io</a></li>
-          </ul>
-        </section>
-
-        <section class="side-sec" id="media">
-          <h3 class="side-title">媒体报道</h3>
-          <ul class="side-list">
-            <li><a href="#">【媒体名】AI 产品经理如何把 demo 变成产品</a></li>
-            <li><a href="#">【媒体名】大模型落地的最后一公里</a></li>
-          </ul>
-        </section>
-
-        <section class="side-sec" id="links">
-          <h3 class="side-title">外站</h3>
-          <ul class="side-list">
-            <li><a href="https://github.com/Nahzzz77" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.woshipm.com/u/1684509" target="_blank" rel="noopener">人人都是产品经理</a></li>
-            <li><a href="#">公众号</a></li>
-          </ul>
-        </section>
-
-      </aside>
-    </div>
+        </div>
+        <aside class="contact-card reveal" aria-label="微信公众号关注入口">
+          <div class="contact-label"><span>WECHAT OFFICIAL ACCOUNT</span><i aria-hidden="true">↘</i></div>
+          <img src="assets/wechat-qr.jpg" alt="张涵的微信公众号二维码" width="430" height="430" loading="lazy">
+          <h3>关注我的公众号</h3><p>扫码进入公众号主页</p><small>持续更新 AI 产品、Agent 与实践思考</small>
+        </aside>
+      </div>
+    </section>
   </main>
 
-  <!-- 页脚 -->
   <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <nav class="footer-nav" aria-label="页脚导航">
-        <a href="https://github.com/Nahzzz77" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.woshipm.com/u/1684509" target="_blank" rel="noopener">人人都是产品经理</a>
-        <a href="#blog">博客</a>
-        <a href="#about">关于</a>
-      </nav>
-      <p class="copyright">© <span id="year"></span> 张涵 · 把复杂变简单</p>
+    <div class="site-shell footer-inner">
+      <a class="brand footer-brand" href="#top"><span>ZHANG HAN</span><i aria-hidden="true"></i></a>
+      <p>把复杂变简单，也把判断写下来。</p>
+      <nav aria-label="页脚导航"><a href="#writing">写作</a><a href="#projects">项目</a><a href="#about">关于</a></nav>
+      <p class="copyright">© <span id="year"></span> 张涵</p>
     </div>
   </footer>
 

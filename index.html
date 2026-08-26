@@ -4,20 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="张涵的个人网站。关注 AI Agent、产品体验与不确定性管理，持续分享 AI 产品思考与实践。">
-  <meta name="theme-color" content="#fbfbf7">
+  <meta name="theme-color" content="#121313">
   <link rel="canonical" href="https://nahzzz77.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nahzzz77.github.io/">
   <meta property="og:title" content="张涵 · AI 产品经理">
   <meta property="og:description" content="把复杂的 AI，做成清楚、可信的产品。">
-  <meta property="og:image" content="https://nahzzz77.github.io/assets/og-card.png">
+  <meta property="og:image" content="https://nahzzz77.github.io/assets/og-card-cinematic.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="张涵 · AI 产品经理">
   <meta name="twitter:description" content="把复杂的 AI，做成清楚、可信的产品。">
-  <meta name="twitter:image" content="https://nahzzz77.github.io/assets/og-card.png">
+  <meta name="twitter:image" content="https://nahzzz77.github.io/assets/og-card-cinematic.png">
   <title>张涵 · AI 产品经理</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="css/style.css?v=20260825-contact">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20260826-scenes">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -27,13 +30,13 @@
       <a class="brand" href="#top" aria-label="张涵的个人网站首页">
         <span>ZHANG HAN</span><i aria-hidden="true"></i>
       </a>
-      <nav class="nav" id="main-nav" aria-label="主导航">
+      <nav class="nav liquid-glass" id="main-nav" aria-label="主导航">
         <a class="active" href="#top">首页</a>
         <a href="#writing">写作</a>
         <a href="#projects">项目</a>
         <a href="#about">关于</a>
       </nav>
-      <a class="header-cta" href="#about">认识我</a>
+      <a class="header-cta" href="#about">联系我</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="打开导航菜单">
         <span></span><span></span>
       </button>
@@ -41,28 +44,48 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="site-shell hero-copy reveal is-visible">
-        <p class="eyebrow">AI 产品经理 · BUILDER · WRITER</p>
-        <h1 id="hero-title">把复杂的 AI，<br><span>做成清楚、可信的产品。</span></h1>
-        <p class="hero-lede">我叫张涵，关注 AI Agent、产品体验与不确定性管理。把模糊的问题拆清楚，再让技术真正服务于人。</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">查看我的工作</a>
-          <a class="button button-quiet" href="#writing">阅读最新文章 <span aria-hidden="true">↘</span></a>
+    <section class="hero cinematic-hero" aria-labelledby="hero-title" data-scene="0">
+      <div class="cinematic-media" aria-hidden="true">
+        <img class="cinematic-poster scene-poster is-active" data-poster-index="0" src="assets/scene-1.jpg" alt="" width="1800" height="1012" fetchpriority="high">
+        <img class="cinematic-poster scene-poster" data-poster-index="1" src="assets/scene-2.jpg" alt="" width="1800" height="1012" fetchpriority="low">
+        <img class="cinematic-poster scene-poster" data-poster-index="2" src="assets/scene-3.jpg" alt="" width="1800" height="1012" fetchpriority="low">
+        <img class="cinematic-poster scene-poster" data-poster-index="3" src="assets/scene-4.jpg" alt="" width="1800" height="1012" fetchpriority="low">
+        <video class="cinematic-video is-active" data-video-slot="0" muted loop playsinline preload="none"></video>
+        <video class="cinematic-video" data-video-slot="1" muted loop playsinline preload="none"></video>
+        <div class="cinematic-scrim"></div>
+        <img class="cinematic-frame" src="assets/cinematic-window.png" alt="" width="2752" height="1536">
+      </div>
+
+      <div class="site-shell cinematic-shell">
+        <div class="cinematic-center reveal is-visible">
+          <p class="hero-badge liquid-glass">AI 产品经理 · BUILDER · WRITER</p>
+          <h1 id="hero-title">把复杂的 AI，<br><span>做成清楚、可信的产品。</span></h1>
+          <p class="hero-lede">我叫张涵，关注 AI Agent、产品体验与不确定性管理。把模糊的问题拆清楚，再让技术真正服务于人。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">查看我的工作</a>
+            <a class="button button-quiet liquid-glass" href="#writing">阅读最新文章 <span aria-hidden="true">↘</span></a>
+          </div>
+          <p class="scene-note" id="scene-note" aria-live="polite">洞察｜先找对问题，再讨论模型。</p>
+        </div>
+
+        <div class="scene-switcher liquid-glass" role="group" aria-label="切换产品工作场景">
+          <button class="scene-button is-active" type="button" data-scene-index="0" aria-pressed="true"><span>01</span>洞察</button>
+          <button class="scene-button" type="button" data-scene-index="1" aria-pressed="false"><span>02</span>设计</button>
+          <button class="scene-button" type="button" data-scene-index="2" aria-pressed="false"><span>03</span>验证</button>
+          <button class="scene-button" type="button" data-scene-index="3" aria-pressed="false"><span>04</span>复盘</button>
+        </div>
+
+        <div class="cinematic-bottom">
+          <p><b>CURRENT FOCUS</b><span>AI Agent 产品设计</span></p>
+          <ul aria-label="关注方向">
+            <li>AI PRODUCT</li><li>AGENT EXPERIENCE</li><li>EVALUATION</li><li>RESPONSIBLE DESIGN</li>
+          </ul>
+          <a href="#method" aria-label="继续浏览我的方法">继续浏览 <span aria-hidden="true">↓</span></a>
         </div>
       </div>
-      <figure class="hero-visual reveal is-visible">
-        <div class="hero-image-wrap">
-          <img src="assets/hero-landscape.jpg" alt="群山、溪流与草甸组成的宁静山谷" width="1792" height="896" fetchpriority="high">
-        </div>
-        <figcaption class="hero-caption">
-          <span><b>Current focus</b> AI Agent 产品设计</span>
-          <span>Scroll to explore <i aria-hidden="true">↓</i></span>
-        </figcaption>
-      </figure>
     </section>
 
-    <section class="manifesto section site-shell reveal" aria-labelledby="manifesto-title">
+    <section class="manifesto section site-shell reveal" id="method" aria-labelledby="manifesto-title">
       <div class="section-kicker"><span>01</span><p>我的方法</p></div>
       <div class="manifesto-copy">
         <h2 id="manifesto-title">先把问题拆清楚，<br>再决定 AI 应该做什么。</h2>
@@ -171,6 +194,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20260826-scenes"></script>
 </body>
 </html>

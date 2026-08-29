@@ -34,6 +34,23 @@ const updateHeader = () => header?.classList.toggle("is-scrolled", window.scroll
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
 
+const navLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
+const navTargets = navLinks
+  .map((link) => ({ link, target: document.querySelector(link.getAttribute("href")) }))
+  .filter(({ target }) => target);
+
+const updateActiveNav = () => {
+  const readingLine = window.scrollY + window.innerHeight * 0.32;
+  let activeTarget = navTargets[0]?.target;
+  navTargets.forEach(({ target }) => {
+    if (target.offsetTop <= readingLine) activeTarget = target;
+  });
+  navTargets.forEach(({ link, target }) => link.classList.toggle("active", target === activeTarget));
+};
+
+updateActiveNav();
+window.addEventListener("scroll", updateActiveNav, { passive: true });
+
 const reveals = document.querySelectorAll(".reveal:not(.is-visible)");
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((entries, currentObserver) => {
@@ -46,31 +63,6 @@ if ("IntersectionObserver" in window) {
   reveals.forEach((item) => observer.observe(item));
 } else {
   reveals.forEach((item) => item.classList.add("is-visible"));
-}
-
-const search = document.getElementById("article-search");
-const articles = [...document.querySelectorAll(".article-row")];
-const searchStatus = document.getElementById("search-status");
-
-if (search && articles.length) {
-  search.addEventListener("input", () => {
-    const query = search.value.trim().toLocaleLowerCase("zh-CN");
-    let visibleCount = 0;
-
-    articles.forEach((article) => {
-      const content = `${article.dataset.search || ""} ${article.textContent}`.toLocaleLowerCase("zh-CN");
-      const matches = !query || content.includes(query);
-      article.hidden = !matches;
-      if (matches) visibleCount += 1;
-    });
-
-    if (!searchStatus) return;
-    searchStatus.textContent = query
-      ? visibleCount > 0
-        ? `找到 ${visibleCount} 篇相关文章`
-        : "没有找到匹配的文章，换个关键词试试。"
-      : "";
-  });
 }
 
 const cinematicHero = document.querySelector(".cinematic-hero");
@@ -87,10 +79,10 @@ const sceneVideos = [
 ];
 
 const sceneNotes = [
-  "洞察｜先找对问题，再讨论模型。",
-  "设计｜把模型能力变成用户能理解、能控制的交互。",
-  "验证｜用真实反馈缩小不确定性。",
-  "复盘｜把一次交付沉淀成下一次判断。"
+  "洞察｜确认用户、场景和成功标准。",
+  "设计｜定义模型、人和边界如何协作。",
+  "验证｜用原型与评测缩小不确定性。",
+  "复盘｜沉淀失败路径与改进优先级。"
 ];
 
 const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");

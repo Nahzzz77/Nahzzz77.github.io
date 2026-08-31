@@ -1128,27 +1128,30 @@ button, input { font: inherit; }
   .cinematic-video { display: none; }
 }
 
-/* Dusk editorial portfolio theme */
+/* Reference paper-and-card theme for the sections after the cinematic hero */
 :root {
-  --paper: #f7f4f8;
-  --paper-deep: #eeeaf7;
-  --surface: #fcfafc;
-  --ink: #242238;
-  --ink-soft: #5f6074;
-  --muted: #6f6d80;
-  --line: #d9d6e2;
-  --line-strong: #aaa4b7;
+  --paper: #f8f5f9;
+  --paper-deep: #f1edf5;
+  --surface: #fdfcff;
+  --ink: #2a2438;
+  --ink-soft: #656174;
+  --muted: #746e80;
+  --line: #ded9e5;
+  --line-strong: #b9b1c5;
   --sage: #e8f0ea;
-  --sage-deep: #315843;
-  --sand: #f0ebf7;
-  --accent: #6d63a8;
-  --card-hover: #f0ebf4;
-  --mist: #e8f0ea;
-  --rose: #eeeaf7;
+  --sage-deep: #4f725d;
+  --sand: #f5efe8;
+  --accent: #7161a5;
+  --accent-purple: #7567a9;
+  --accent-pink: #cf7197;
+  --accent-orange: #dda466;
+  --card-hover: #faf8fc;
+  --mist: #f8f5f9;
+  --rose: #f8f5f9;
   --green: #4f725d;
   --purple-soft: #8f79bc;
-  --dark: #3b3556;
-  --on-dark: #f9f6fa;
+  --dark: #393342;
+  --on-dark: #fbf9fc;
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   --font-display: "Source Han Serif SC", "Noto Serif CJK SC", "Iowan Old Style", "Songti SC", "STSong", "SimSun", Georgia, serif;
   --font-serif: var(--font-display);
@@ -1332,11 +1335,11 @@ main > section { scroll-margin-top: 84px; }
 }
 
 .project-card a:hover { background: var(--card-hover); }
-.project-card:nth-child(1) a { box-shadow: inset 0 3px 0 var(--accent); }
-.project-card:nth-child(2) a { box-shadow: inset 0 3px 0 var(--green); }
-.project-card:nth-child(3) a { box-shadow: inset 0 3px 0 var(--purple-soft); }
+.project-card:nth-child(1) a { box-shadow: inset 0 3px 0 var(--accent-purple); }
+.project-card:nth-child(2) a { box-shadow: inset 0 3px 0 var(--accent-pink); }
+.project-card:nth-child(3) a { box-shadow: inset 0 3px 0 var(--accent-orange); }
 .project-card:nth-child(2) .project-details dt,
-.project-card:nth-child(2) .project-link { color: var(--green); }
+.project-card:nth-child(2) .project-link { color: var(--accent); }
 
 .project-meta {
   color: var(--muted);
@@ -1395,13 +1398,22 @@ main > section { scroll-margin-top: 84px; }
 
 /* Product method */
 .manifesto {
+  border-top: 1px solid var(--line);
   border-bottom-color: var(--line);
-  background: var(--mist);
-  box-shadow: 0 0 0 100vmax var(--mist);
-  clip-path: inset(0 -100vmax);
+  background: var(--paper);
+  box-shadow: none;
+  clip-path: none;
 }
 
-.manifesto .section-kicker,
+.manifesto .section-kicker { color: var(--accent); }
+
+.manifesto-copy {
+  padding: clamp(28px, 4vw, 52px);
+  border: 1px solid var(--line-strong);
+  border-top: 3px solid var(--green);
+  background: var(--surface);
+}
+
 .manifesto .principle-list li > span { color: var(--green); }
 
 .manifesto-copy > p {
@@ -1444,13 +1456,18 @@ main > section { scroll-margin-top: 84px; }
   color: var(--ink);
 }
 
-.feature-card-main > a { background: var(--dark); color: var(--on-dark); }
-.feature-card:nth-child(2) > a { background: var(--sage); }
-.feature-card:nth-child(3) > a { background: var(--paper-deep); }
+.feature-card-main > a,
+.feature-card:nth-child(2) > a,
+.feature-card:nth-child(3) > a {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.feature-card:nth-child(1) > a { box-shadow: inset 0 3px 0 var(--accent-purple); }
+.feature-card:nth-child(2) > a { box-shadow: inset 0 3px 0 var(--green); }
+.feature-card:nth-child(3) > a { box-shadow: inset 0 3px 0 var(--accent-pink); }
 .feature-card > a:hover { background: var(--card-hover); }
-.feature-card-main > a:hover { background: #494263; }
-.feature-card:nth-child(2) > a:hover { background: #dceade; }
-.feature-card:nth-child(3) > a:hover { background: #e5def2; }
+.feature-card > a::before { opacity: .03; }
 
 .card-top {
   color: var(--muted);
@@ -1483,12 +1500,14 @@ main > section { scroll-margin-top: 84px; }
 }
 
 .feature-card-main .card-top,
-.feature-card-main .card-body > p:last-child { color: #d8d1df; }
+.feature-card-main .card-body > p:last-child { color: var(--ink-soft); }
 .feature-card-main .card-label,
-.feature-card-main .card-arrow { color: #efb2c3; }
-.feature-card-main .card-body h3 { color: var(--on-dark); }
+.feature-card-main .card-arrow { color: var(--accent); }
+.feature-card-main .card-body h3 { color: var(--ink); }
 .feature-card:nth-child(2) .card-label,
 .feature-card:nth-child(2) .card-arrow { color: var(--green); }
+.feature-card:nth-child(3) .card-label { color: var(--accent); }
+.feature-card:nth-child(3) .card-arrow { color: var(--accent-pink); }
 
 .writing-index {
   margin-top: 82px;
@@ -1533,6 +1552,12 @@ main > section { scroll-margin-top: 84px; }
 /* About and contact */
 .about-title-muted { color: #81748c; }
 
+.about {
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
 .about-copy h2 {
   font-size: clamp(42px, 5vw, 68px);
   line-height: 1.1;
@@ -1561,15 +1586,16 @@ main > section { scroll-margin-top: 84px; }
 
 .contact-card {
   border: 1px solid var(--line-strong);
-  background: var(--dark);
-  color: var(--on-dark);
+  border-top: 3px solid var(--accent-purple);
+  background: var(--surface);
+  color: var(--ink);
 }
 
 .contact-label,
-.contact-card p { color: #d8d1df; }
+.contact-card p { color: var(--muted); }
 .contact-label { font-size: 12px; }
-.contact-card h3 { color: var(--on-dark); font-family: var(--font-serif); font-weight: 400; }
-.contact-card small { color: #bcb2c5; font-size: 12px; }
+.contact-card h3 { color: var(--ink); font-family: var(--font-serif); font-weight: 400; }
+.contact-card small { color: var(--ink-soft); border-top-color: var(--line); font-size: 12px; }
 
 /* Footer */
 .site-footer {
@@ -1640,6 +1666,7 @@ main > section { scroll-margin-top: 84px; }
   .project-details div { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
   .project-details dt { font-size: 11px; }
   .project-details dd { font-size: 14px; }
+  .manifesto-copy { padding: 24px 20px; }
   .principle-list li { grid-template-columns: 34px 1fr; gap: 10px 14px; }
   .principle-list small { grid-column: 2; font-size: 14px; }
   .feature-card-main,
